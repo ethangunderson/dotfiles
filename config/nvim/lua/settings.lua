@@ -1,0 +1,35 @@
+local o = vim.opt
+local g = vim.g
+
+o.number = true
+o.relativenumber = true
+o.hlsearch = true
+o.incsearch = true
+o.showmatch = true
+o.scrolloff = 3
+o.signcolumn = "yes"
+o.mouse = "a"
+o.tabstop = 2
+o.softtabstop = 2
+o.shiftwidth = 2
+o.expandtab = true
+o.smartindent = true
+o.exrc = true
+o.splitbelow = true
+o.splitright = true
+o.clipboard = "unnamedplus"
+o.ignorecase = true
+o.smartcase = true
+o.cursorline = true
+o.updatetime = 100
+o.shortmess = "Ica"
+o.breakindent = true
+o.linebreak = true
+o.autoread = true
+o.backup = false
+o.swapfile = false
+o.spell = true
+o.laststatus = 2
+o.wildmenu = true
+
+g.completeopt = "menu,menuone,noinsert"

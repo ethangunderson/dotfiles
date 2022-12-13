@@ -1,0 +1,9 @@
+SPACESHIP_PROMPT_ORDER=(
+  user
+  dir
+  git
+  exec_time
+  line_sep
+  exit_code
+  char
+)

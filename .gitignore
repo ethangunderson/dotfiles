@@ -1,0 +1,14 @@
+.DS_Store
+config/gh/hosts.yml
+config/gh/state.yml
+config/nvim/.netrwhist
+config/htop/htoprc
+config/configstore
+
+*.swp
+
+config/zsh/.zsh_history
+config/zsh/.zcompdump
+
+config/nvim/plugin/packer_compiled.lua
+config/zsh/.zsh_sessions/

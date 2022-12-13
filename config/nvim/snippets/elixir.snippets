@@ -1,0 +1,7 @@
+snippet defmo
+				defmodule ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} do
+					@doc """
+					$2
+					"""
+					${0}
+				end

@@ -1,0 +1,31 @@
+[user]
+  name = Ethan Gunderson
+  email = ethan@ethangunderson.com
+
+[core]
+  pager = delta
+  editor = nvim
+
+[branch]
+  autosetuprebase = always
+
+[diff]
+  colorMoved = default
+
+[pull]
+  rebase = true
+
+[merge]
+  conflictstyle = diff3
+
+[fetch]
+  prune = true
+  
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+[delta]
+  line-numbers = true
+  syntax-theme = base16
+  side-by-side = false 
+  file-modified-label = modified:
