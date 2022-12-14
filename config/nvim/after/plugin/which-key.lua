@@ -6,9 +6,9 @@ wk.register({
     n = {"<cmd>NvimTreeToggle<CR>", "Toggle nvim tree"},
     w = {"<cmd>w<CR>", "Write file"},
     s = {
-      p = {"<cmd>Telescope find_files<CR>", "Search in files"},
-      f = {"<cmd>Telescope live_grep<CR>", "Find files"},
-      g = {"<cmd>Telescope grep_string<CR>", "Grep String"}
+      p = {"<cmd>Telescope find_files hidden=true<CR>", "Search in files"},
+      f = {"<cmd>Telescope live_grep hidden=true<CR>", "Find files"},
+      g = {"<cmd>Telescope grep_string hidden=true<CR>", "Grep String"}
     }
   }
 })
