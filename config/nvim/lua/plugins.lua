@@ -40,4 +40,6 @@ return require('packer').startup(function(use)
   use 'github/copilot.vim'
 
   use 'mhinz/vim-signify'
+  
+  use 'vim-test/vim-test'
 end)
