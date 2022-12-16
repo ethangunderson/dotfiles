@@ -15,6 +15,11 @@ wk.register({
       f = {"<cmd> TestFile<CR>", "Run test file"},
       l = {"<cmd> TestLast<CR>", "Run the last test"},
       s = {"<cmd> TestSuite<CR>", "Run the test suite"}
+    },
+    x = {
+      x = {"<cmd> TroubleToggle<CR>", "Toggle Trouble"},
+      q = {"<cmd> TroubleToggle quickfix<CR>", "Toggle Trouble to quickfix"},
+      n = { function() require('trouble').next({skip_groups = true, jump = true}) end, "Jump to next trouble"}
     }
   }
 })

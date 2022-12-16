@@ -34,6 +34,8 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
+  use 'folke/trouble.nvim'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
 
   use 'echasnovski/mini.nvim'
 
