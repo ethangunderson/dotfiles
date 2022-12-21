@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/vim-vsnip'
   use 'folke/trouble.nvim'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
+  use 'onsails/lspkind.nvim'
 
   use 'echasnovski/mini.nvim'
 

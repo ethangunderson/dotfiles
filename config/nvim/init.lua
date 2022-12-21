@@ -6,6 +6,8 @@ local g = vim.g
 g.mapleader = " "
 g.maplocalleader = " "
 
+g.completeopt = "menu,menuone,noinsert"
+
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox-flat]])
 vim.g.gruvbox_flat_style = "hard"

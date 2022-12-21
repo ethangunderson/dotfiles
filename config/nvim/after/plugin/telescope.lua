@@ -6,7 +6,8 @@ require('telescope').setup {
   defaults = {
     file_ignore_patterns = {
       "node_modules",
-      ".git/.*"
+      ".git/.*",
+      ".elixir_ls"
       },
     prompt_prefix = ' |>',
     winblend = 0,
@@ -44,6 +45,9 @@ require('telescope').setup {
   },
 
   pickers = {
+    git_status = {
+      theme = 'ivy'
+    },
     find_files = {
       theme = "ivy"
     },
@@ -51,6 +55,15 @@ require('telescope').setup {
       theme = "ivy"
     },
     grep_string = {
+      theme = "ivy"
+    },
+    oldfiles = {
+      theme = "ivy"
+    },
+    diagnostics = {
+      theme = "ivy"
+    },
+    lsp_document_symbols = {
       theme = "ivy"
     }
   },
