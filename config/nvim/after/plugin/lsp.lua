@@ -13,3 +13,17 @@ lsp.ensure_installed({
 
 lsp.setup()
 
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    update_in_insert = true,
+    underline = true,
+    signs = true,
+    virtual_text = true,
+    float = {
+      show_header = true,
+      source = 'always',
+      border = 'rounded',
+      focusable = false,
+    },
+  }
+)
