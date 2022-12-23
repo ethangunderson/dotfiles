@@ -5,6 +5,7 @@
 [core]
   pager = delta
   editor = nvim
+  excludesFile = ~/.config/git/ignore
 
 [branch]
   autosetuprebase = always
