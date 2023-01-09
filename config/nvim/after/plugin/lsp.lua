@@ -1,17 +1,17 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
-local lsp = require('lsp-zero')
 
-lsp.preset('recommended')
+local lspconfig = require('lspconfig')
 
-lsp.ensure_installed({
-  'elixirls',
-  'html',
-  'sumneko_lua',
-  'tailwindcss',
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+require('mason-lspconfig').setup_handlers({
+  function(server_name)
+    lspconfig[server_name].setup({
+      on_attach = lsp_attach,
+      capabilities = lsp_capabilities,
+    })
+  end,
 })
-
-lsp.setup()
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
