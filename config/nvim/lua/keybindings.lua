@@ -16,7 +16,7 @@ k.set("n", "<Esc>", "<Esc>:noh<CR>", { silent = true })
 -- Toggle relative linenumber for all open buffers
 k.set("n", "<leader>tln", ":windo set relativenumber!<CR>")
 
--- Move visual selection 
+-- Move visual selection
 k.set("v", "J", ":m '>+1<cr>gv=gv")
 k.set("v", "K", ":m '<-2<cr>gv=gv")
 
@@ -26,7 +26,3 @@ k.set("n", "<Space><Space>", "vip")
 -- Move between sections (blank lines)
 k.set("n", "<C-j>", "}")
 k.set("n", "<C-k>", "{")
-
---Open files in github
-k.set("v", "<leader>gh", ":'<,'>OpenGithubFile<CR>")
-k.set("n", "<leader>gh", ":OpenGithubFile<CR>")
