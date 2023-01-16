@@ -20,9 +20,6 @@ k.set("n", "<leader>tln", ":windo set relativenumber!<CR>")
 k.set("v", "J", ":m '>+1<cr>gv=gv")
 k.set("v", "K", ":m '<-2<cr>gv=gv")
 
--- Select block of code with space space
-k.set("n", "<Space><Space>", "vip")
-
 -- Move between sections (blank lines)
 k.set("n", "<C-j>", "}")
 k.set("n", "<C-k>", "{")

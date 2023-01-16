@@ -1,6 +1,31 @@
-require('nvim-treesitter.configs').setup {
+require("nvim-treesitter.configs").setup({
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = {"bash", "css", "dockerfile", "eex", "elixir", "erlang", "fish", "graphql", "hcl", "help", "html", "javascript", "json", "lua", "make", "nix", "php", "python", "regex", "ruby", "typescript", "surface", "vim", "heex"},
+  ensure_installed = {
+    "bash",
+    "css",
+    "dockerfile",
+    "eex",
+    "elixir",
+    "erlang",
+    "fish",
+    "graphql",
+    "hcl",
+    "help",
+    "html",
+    "javascript",
+    "json",
+    "lua",
+    "make",
+    "nix",
+    "php",
+    "python",
+    "regex",
+    "ruby",
+    "typescript",
+    "surface",
+    "vim",
+    "heex",
+  },
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -9,7 +34,7 @@ require('nvim-treesitter.configs').setup {
   ignore_install = { "" },
 
   indent = {
-    true
+    true,
   },
 
   highlight = {
@@ -24,5 +49,15 @@ require('nvim-treesitter.configs').setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
-  }
-}
+  },
+
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<CR>",
+      node_incremental = "<CR>",
+      scope_incremental = "<S-CR>",
+      node_decremental = "<BS>",
+    },
+  },
+})
