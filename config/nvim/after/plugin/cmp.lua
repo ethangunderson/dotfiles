@@ -9,6 +9,7 @@ cmp.setup({
     { name = "nvim_lsp_signature_help" },
     { name = "luasnip" },
     { name = "path" },
+    { name = "hex" },
   }, {
     { name = "buffer", keyword_length = 5 },
   }),

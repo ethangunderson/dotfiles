@@ -1,7 +1,7 @@
 return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
 
-  use("eddyekofo94/gruvbox-flat.nvim")
+  use("ellisonleao/gruvbox.nvim")
 
   use("nvim-lua/plenary.nvim")
   use("nvim-telescope/telescope.nvim")
@@ -51,4 +51,8 @@ return require("packer").startup(function(use)
   use("vim-test/vim-test")
 
   use("jose-elias-alvarez/null-ls.nvim")
+
+  use("~/projects/cmp-hex")
+
+  use("tpope/vim-fugitive")
 end)

@@ -9,13 +9,14 @@ g.maplocalleader = " "
 g.completeopt = "menu,menuone,noinsert"
 
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox-flat]])
-vim.g.gruvbox_flat_style = "hard"
-
--- vim.api.nvim_set_hl(0, "Normal", {bg="#252525"})
--- vim.api.nvim_set_hl(0, "EndOfBuffer", {bg="#252525"})
--- vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", {bg="#252525"})
--- vim.api.nvim_set_hl(0, "NvimTreeNormal", {bg="#252525"})
+require("gruvbox").setup({
+  bold = false,
+  contrast = "hard",
+  palette_overrides = {
+    bright_green = "#abb025",
+  },
+})
+vim.cmd([[colorscheme gruvbox]])
 
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   callback = function()
