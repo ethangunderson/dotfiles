@@ -39,6 +39,8 @@ return require("packer").startup(function(use)
   use("folke/trouble.nvim")
   use("hrsh7th/cmp-nvim-lsp-signature-help")
   use("onsails/lspkind.nvim")
+  use("SmiteshP/nvim-navic")
+  use("utilyre/barbecue.nvim")
 
   use("echasnovski/mini.nvim")
 
