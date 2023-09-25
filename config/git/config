@@ -30,3 +30,5 @@
   syntax-theme = base16
   side-by-side = false 
   file-modified-label = modified:
+[init]
+	defaultBranch = main
