@@ -1,69 +1,26 @@
 return {
-  "folke/which-key.nvim",
-  config = function()
-    local wk = require("which-key")
-    wk.setup({
-      window = {
-        border = "double",
-      },
-    })
-
-    wk.register({
-      ["<leader>"] = {
-        g = {
-          name = "Git",
-          o = { "<cmd>'<,'>OpenGithubFile<CR>", "Open selection on github" },
-        },
-      },
-    }, { mode = "v" })
-
-    wk.register({
-      ["<leader>"] = {
-        ["/"] = {
-          function()
-            require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-              previewer = false,
-              theme = "ivy",
-            }))
-          end,
-          "Fuzzy search buffer",
-        },
-        n = { "<cmd>NvimTreeToggle<CR>", "Toggle nvim tree" },
-        w = { "<cmd>w<CR>", "Write file" },
-        s = {
-          name = "Search",
-          f = { "<cmd>Telescope find_files hidden=true<CR>", "Search files" },
-          g = { "<cmd>Telescope live_grep hidden=true<CR>", "Grep files" },
-          w = { "<cmd>Telescope grep_string hidden=true<CR>", "Grep string" },
-          r = { "<cmd>Telescope oldfiles hidden=true<CR>", "Find recent files" },
-          d = { "<cmd>Telescope diagnostics hidden=true<CR>", "Search diagnostics" },
-          s = { "<cmd>Telescope lsp_document_symbols hidden=true<CR>", "Search document symbols" },
-        },
-        g = {
-          name = "Git",
-          s = { "<cmd>Telescope git_status<CR>", "List current changes" },
-          c = { "<cmd>Telescope git_commits<CR>", "List commits" },
-          o = { "<cmd>OpenGithubFile<CR>", "Open file on github" },
-        },
-        t = {
-          name = "Tests",
-          t = { "<cmd> TestNearest<CR>", "Run nearest test" },
-          f = { "<cmd> TestFile<CR>", "Run test file" },
-          l = { "<cmd> TestLast<CR>", "Run the last test" },
-          s = { "<cmd> TestSuite<CR>", "Run the test suite" },
-        },
-        x = {
-          name = "Trouble",
-          x = { "<cmd> TroubleToggle<CR>", "Toggle Trouble" },
-          q = { "<cmd> TroubleToggle quickfix<CR>", "Toggle Trouble to quickfix" },
-          n = {
-            function()
-              require("trouble").next({ skip_groups = true, jump = true })
-            end,
-            "Jump to next trouble",
-          },
-        },
-      },
-    })
-  end
+	"folke/which-key.nvim",
+	config = function()
+		local wk = require("which-key")
+		wk.add({
+			{ "<leader>g", "Git", mode = "v" },
+			{ "<leader>go", "<cmd>'<,'>OpenGithubFile<CR>", desc = "Open selection on github", mode = "v" },
+			{ "<leader>/", "Fuzzy search buffer" },
+			{ "<leader>n", "<cmd>NvimTreeToggle<CR>", desc = "Toggle nvim tree" },
+			{ "<leader>w", "<cmd>w<CR>", desc = "Write file" },
+			{ "<leader>sf", "<cmd>Telescope find_files hidden=true<CR>", desc = "Find files" },
+			{ "<leader>sg", "<cmd>Telescope live_grep hidden=true<CR>", desc = "Search in files" },
+			{ "<leader>sw", "<cmd>Telescope grep_string hidden=true<CR>", desc = "Search word" },
+			{ "<leader>sr", "<cmd>Telescope oldfiles hidden=true<CR>", desc = "Recent files" },
+			{ "<leader>sd", "<cmd>Telescope diagnostics hidden=true<CR>", desc = "Diagnostics" },
+			{ "<leader>ss", "<cmd>Telescope lsp_document_symbols hidden=true<CR>", desc = "Document symbols" },
+			{ "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "Git status" },
+			{ "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "Git commits" },
+			{ "<leader>go", "<cmd>OpenGithubFile<CR>", desc = "Open on github" },
+			{ "<leader>tt", "<cmd> TestNearest<CR>", desc = "Test nearest" },
+			{ "<leader>tf", "<cmd> TestFile<CR>", desc = "Test file" },
+			{ "<leader>tl", "<cmd> TestLast<CR>", desc = "Test last" },
+			{ "<leader>ts", "<cmd> TestSuite<CR>", desc = "Test suite" },
+		})
+	end,
 }
