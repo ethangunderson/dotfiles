@@ -1,5 +1,5 @@
 return {
-	dir = "stevearc/conform.nvim",
+	"stevearc/conform.nvim",
 	-- "ethangunderson/conform.nvim",
 	-- branch = "mix",
 	config = function()
